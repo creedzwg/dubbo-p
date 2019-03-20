@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: dubbo-p
+  datasource:
+    url: jdbc:mysql://47.101.51.192:3306/test?useSSL = false
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: agent123
+
+#dubbo名称
+dubbo:
+  application:
+    name: dubbo-p
+    # dubbo 注册中心
+    id: dubbo-p
+  registry:
+    protocol: zookeeper
+    address: localhost:2181
+    check: true
+  # dubbo 暴露服务协议及地址
+  protocol:
+    port: 21881
+    name: dubbo
+
